@@ -1,7 +1,7 @@
 package main
 
 import (
-	"heckel.io/natter"
+	"github.com/tiebingzhang/natter"
 )
 
 func main() {

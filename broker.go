@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/lucas-clemente/quic-go"
 	"github.com/lucas-clemente/quic-go/qerr"
-	"heckel.io/natter/internal"
+	"github.com/tiebingzhang/natter/internal"
 	"log"
 	"net"
 	"sync"

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/golang/protobuf/proto"
 	"github.com/lucas-clemente/quic-go"
-	"heckel.io/natter/internal"
+	"github.com/tiebingzhang/natter/internal"
 	"log"
 	"math/rand"
 	"net"

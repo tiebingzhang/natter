@@ -3,7 +3,7 @@ package natter
 import (
 	"errors"
 	"github.com/golang/protobuf/proto"
-	"heckel.io/natter/internal"
+	"github.com/tiebingzhang/natter/internal"
 	"log"
 	"math/rand"
 	"net"

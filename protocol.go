@@ -5,7 +5,7 @@ import (
 	"errors"
 	"github.com/golang/protobuf/proto"
 	"github.com/lucas-clemente/quic-go"
-	"heckel.io/natter/internal"
+	"github.com/tiebingzhang/natter/internal"
 	"io"
 	"log"
 	"sync"

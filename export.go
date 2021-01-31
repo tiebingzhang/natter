@@ -1,5 +1,6 @@
 package natter
 
+/*
 import "C"
 import "unsafe"
 
@@ -66,3 +67,4 @@ func toGoStrings(argc C.int, argv **C.char) []string {
 	}
 }
 
+*/

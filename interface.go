@@ -47,7 +47,7 @@ type Config struct {
 	ClientId string
 
 	// Hostname and port of the broker. The broker is only used to connect
-	// the two peers. Example: heckel.io:2568
+	// the two peers. Example: github.com/tiebingzhang:2568
 	BrokerAddr string
 
 	// Configure TLS for all TLS clients

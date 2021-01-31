@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/lucas-clemente/quic-go"
-	"heckel.io/natter/internal"
+	"github.com/tiebingzhang/natter/internal"
 	"io"
 	"log"
 	"math/rand"

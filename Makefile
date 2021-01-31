@@ -23,7 +23,7 @@ proto:
 	protoc --go_out=. internal/*.proto
 	@echo
 
-cmd: proto
+cmd: 
 	@echo == Building natter CLI ==
 	mkdir -p build/cmd
 	go build -o build/cmd/natter cmd/natter/main.go

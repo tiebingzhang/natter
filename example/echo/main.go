@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"heckel.io/natter"
+	"github.com/tiebingzhang/natter"
 	"io"
 	"net"
 	"time"

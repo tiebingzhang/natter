@@ -1,4 +1,4 @@
-module heckel.io/natter
+module github.com/tiebingzhang/natter
 
 go 1.12
 

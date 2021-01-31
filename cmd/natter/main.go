@@ -4,7 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"heckel.io/natter"
+	"github.com/tiebingzhang/natter"
 	"log"
 	"os"
 	"strings"
