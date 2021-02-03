@@ -2,13 +2,14 @@ package natter
 
 import (
 	"errors"
-	"github.com/golang/protobuf/proto"
-	"github.com/tiebingzhang/natter/internal"
 	"log"
 	"math/rand"
 	"net"
 	"sync"
 	"time"
+
+	"github.com/golang/protobuf/proto"
+	"github.com/tiebingzhang/natter/internal"
 )
 
 type client struct {
@@ -40,7 +41,7 @@ const (
 	letterBytes                = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	punchInterval              = 15 * time.Second
 	connectionIdLength         = 8
-	connectionIdleTimeout      = 5 * time.Second
+	connectionIdleTimeout      = 50 * time.Second
 	connectionHandshakeTimeout = 5 * time.Second
 )
 
