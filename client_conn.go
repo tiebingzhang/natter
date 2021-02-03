@@ -3,22 +3,23 @@ package natter
 import (
 	"errors"
 	"fmt"
-	"github.com/golang/protobuf/proto"
-	"github.com/lucas-clemente/quic-go"
-	"github.com/tiebingzhang/natter/internal"
 	"log"
 	"math/rand"
 	"net"
 	"sync"
 	"time"
+
+	"github.com/golang/protobuf/proto"
+	"github.com/lucas-clemente/quic-go"
+	"github.com/tiebingzhang/natter/internal"
 )
 
 const (
 	checkLoopSleep = 15 * time.Second
 )
 
-type messageCallback func (messageType messageType, message proto.Message)
-type errorCallback func ()
+type messageCallback func(messageType messageType, message proto.Message)
+type errorCallback func()
 
 type clientConn struct {
 	config          *Config
@@ -89,9 +90,9 @@ func (b *clientConn) connect() error {
 	go b.handleCheckinLoop()
 
 	select {
-	case <- b.connectedChan:
+	case <-b.connectedChan:
 		return nil
-	case <- time.After(5 * time.Second):
+	case <-time.After(5 * time.Second):
 		return errors.New("timed out while connecting")
 	}
 }
@@ -140,7 +141,7 @@ func (b *clientConn) handleIncoming() {
 
 	for {
 		select {
-		case <- b.exitChan:
+		case <-b.exitChan:
 			return
 		default:
 		}
@@ -148,7 +149,7 @@ func (b *clientConn) handleIncoming() {
 		messageType, message, err := b.proto.receive()
 		if err != nil {
 			log.Println("Error reading message from broker connection: " + err.Error())
-			return
+			log.Fatalf("Exiting\n")
 		}
 
 		switch messageType {
@@ -178,9 +179,9 @@ func (b *clientConn) handleCheckinLoop() {
 		}
 
 		select {
-		case <- b.exitChan:
+		case <-b.exitChan:
 			return
-		case <- time.After(checkLoopSleep):
+		case <-time.After(checkLoopSleep):
 		}
 	}
 }
